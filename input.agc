@@ -10,6 +10,11 @@ global Key_Left as integer = 37
 global Key_Right as integer = 39
 global key_tab as integer = 9
 
+global but_D as integer = 21
+global but_F as integer = 22
+global but_J as integer = 23
+global but_K as integer = 24
+
 //Variaveis de controle
 
 global ctJ as integer = 0
@@ -21,13 +26,13 @@ global ctD as integer = 0
 
 function press_J()
 	
-	if(GetRawKeyPressed(Key_j) = 1)	
+	if(GetRawKeyPressed(Key_j) = 1 or GetVirtualButtonPressed(but_J) = 1)	
 		SetSpritePosition(1, GetSpriteX(1) , 711 )
 		ctJ = 0
 		PlaySprite (1, 20, 0, 4, 6)	
 		else
 			
-			if (GetRawKeyPressed(Key_J) = 0) and GetSpritePlaying(1) = 0
+			if (GetRawKeyPressed(Key_J) = 0  and GetSpritePlaying(1) = 0)
 			PlaySprite (1, 8, 1, 7, 9)
 			ctJ = 1
 			endif
@@ -38,7 +43,7 @@ endfunction
 
 function press_K()
 	
-	if(GetRawKeyPressed(Key_K) = 1)	
+	if(GetRawKeyPressed(Key_K) = 1 or GetVirtualButtonPressed(but_K) = 1)	
 		SetSpritePosition(1, GetSpriteX(1) , 400  )
 		ctK = 0
 		 PlaySprite (1, 20, 0, 10, 12)
@@ -56,7 +61,7 @@ endfunction
 
 function press_D()
 	
-	if(GetRawKeyPressed(Key_D) = 1)	
+	if(GetRawKeyPressed(Key_D) = 1 or GetVirtualButtonPressed(but_D) = 1)	
 		SetSpritePosition(4, GetSpriteX(4) , 460)
 		ctD = 0
 		PlaySprite (4, 20, 0, 10, 12)	
@@ -77,7 +82,7 @@ endfunction
 
 function press_F()
 	
-	if(GetRawKeyPressed(Key_F) = 1)	
+	if(GetRawKeyPressed(Key_F) = 1 or GetVirtualButtonPressed(but_F) = 1)	
 		SetSpritePosition(4, GetSpriteX(4) , 80)
 		ctF = 0
 		PlaySprite (4, 20, 0, 4, 6)	

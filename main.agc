@@ -153,6 +153,12 @@ do
 	
 	elseif (state = 2)
 		
+		
+		if (tutorialCT = 1) // remove a tela de tutorial quando entra na tela de seleção
+			DeleteSprite(tt)
+			tutorialCT = 0
+		endif
+		
 		if (menu2CT = 0)
 			
 			musica = musica + 1
@@ -255,6 +261,26 @@ do
 		
 		if(gameplayCT = 0)
 			
+			// botões para mobile
+		
+			AddVirtualButton(but_D, 1500, 330, 0 )
+			SetVirtualButtonSize(but_D,900,500)
+			SetVirtualButtonAlpha(but_D,0)
+			
+			AddVirtualButton( but_F, 450, 330, 0 )
+			SetVirtualButtonSize(but_F,900,500)
+			SetVirtualButtonAlpha(but_F,0)
+			
+			AddVirtualButton( but_J, 450, 900, 100 )
+			SetVirtualButtonSize(but_J,900,500)
+			SetVirtualButtonAlpha(but_J,0)
+			
+			AddVirtualButton( but_K, 1500, 900, 100 )
+			SetVirtualButtonSize(but_K,900,500)
+			SetVirtualButtonAlpha(but_K,0)
+			
+			//gameplay assets
+			
 			startMenu3(music3,menubg,music2,music1,menu2,Hud)
 			
 			gameplayCT = 1
@@ -274,6 +300,11 @@ do
 			j = 0
 			musica = musica - 1
 			musicCT = 0
+			
+			DeleteVirtualButton(21)
+			DeleteVirtualButton(22)
+			DeleteVirtualButton(23)
+			DeleteVirtualButton(24)
 			
 		endif	
 		
@@ -307,10 +338,14 @@ do
 				
 		// # Input Command
 		
+		if state = 3
+		
 		press_K()
 		press_J()
 		press_F()
 		press_D()
+		
+		endif
 		
 		//Prints
 		
