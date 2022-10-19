@@ -22,6 +22,7 @@ deep_link=
 admob_app_id=
 snapchat_client_id=
 arcore=0
+app_icon_new_path=
 
 [ipa_settings]
 app_icon_path=
@@ -48,7 +49,7 @@ splash_color=
 [html5_settings]
 commands_used=0
 dynamic_memory=0
-output_path=C:\\Users\\Pichau\\Projects\\Faculdade\\Agk\\html\\HTML5
+output_path=C:\\Users\\rnbar\\OneDrive\\Área de Trabalho\\Nova pasta
 
 [projectfiles]
 FILE_0=main.agc;-1
@@ -59,10 +60,10 @@ FILE_4=screen.agc;-1
 FILE_5=Variables.agc;-1
 
 [files]
-FILE_NAME_0=0;main.agc;0;3
-FILE_NAME_1=0;input.agc;0;2
+FILE_NAME_0=1;main.agc;5021;3
+FILE_NAME_1=0;input.agc;806;2
 FILE_NAME_2=0;assets.agc;0;0
-FILE_NAME_3=1;function.agc;7797;1
+FILE_NAME_3=0;function.agc;7085;1
 FILE_NAME_4=0;screen.agc;0;4
 FILE_NAME_5=0;Variables.agc;0;5
 

@@ -350,45 +350,48 @@ endfunction px
 startHitMechanics:
 
 // # Sistema de acerto dos objetos	
-	
-	if GetSpriteCollision ( 1, caixaDW[i].n) = 1 and GetRawKeyState(Key_J) = 1 and ctJ = 0 and GetSpriteCollision(2, caixaDW[i].n)
-		
-		SetSpritePosition(caixaDW[i].n,2000,540)
-        SetSpriteActive(caixaDW[i].n,0)
-        i = i + 1
-        PlaySound(hitDW,25)
-        hit()
 
-	endif
-	
-	if GetSpriteCollision ( 1, caixaDW[i].n) = 1 and GetRawKeyState(Key_K) = 1 and ctK = 0 and GetSpriteCollision(2, caixaDW[i].n)
+	if state = 3
 		
-		SetSpritePosition(caixaDW[i].n,2000,540)
-        SetSpriteActive(caixaDW[i].n,0)
-        i = i + 1
-        PlaySound(hitDW,25)
-        hit()
+		if GetSpriteCollision ( 1, caixaDW[i].n) = 1 and (GetRawKeyState(Key_J) = 1 or GetVirtualButtonState(but_J) = 1 ) and  ctJ = 0 and GetSpriteCollision(2, caixaDW[i].n)
+			
+			SetSpritePosition(caixaDW[i].n,2000,540)
+			SetSpriteActive(caixaDW[i].n,0)
+			i = i + 1
+			PlaySound(hitDW,25)
+			hit()
 
-	endif
-	
-	if GetSpriteCollision ( 4, caixaUP[j].n) = 1 and GetRawKeyState(Key_F) = 1 and ctF = 0 and GetSpriteCollision(2, caixaUP[j].n)
+		endif
 		
-		SetSpritePosition(caixaUP[j].n,2000,540)
-        SetSpriteActive(caixaUP[j].n,0)
-        j = j + 1
-        PlaySound(hitUP,25)
-        hit()
+		if GetSpriteCollision ( 1, caixaDW[i].n) = 1 and (GetRawKeyState(Key_K) = 1 or GetVirtualButtonState(but_K) = 1 ) and ctK = 0 and GetSpriteCollision(2, caixaDW[i].n)
+			
+			SetSpritePosition(caixaDW[i].n,2000,540)
+			SetSpriteActive(caixaDW[i].n,0)
+			i = i + 1
+			PlaySound(hitDW,25)
+			hit()
 
-	endif
-	
-	if GetSpriteCollision ( 4, caixaUP[j].n) = 1 and GetRawKeyState(Key_D) = 1 and ctD = 0 and GetSpriteCollision(2, caixaUP[j].n) and GetSpriteY(caixaUP[j].n) = mdPos
+		endif
 		
-		SetSpritePosition(caixaUP[j].n,2000,540)
-        SetSpriteActive(caixaUP[j].n,0)
-        j = j + 1
-        PlaySound(hitUP,25)
-        hit()
+		if GetSpriteCollision ( 4, caixaUP[j].n) = 1 and (GetRawKeyState(Key_F) = 1 or GetVirtualButtonState(but_F) = 1 ) and ctF = 0 and GetSpriteCollision(2, caixaUP[j].n)
+			
+			SetSpritePosition(caixaUP[j].n,2000,540)
+			SetSpriteActive(caixaUP[j].n,0)
+			j = j + 1
+			PlaySound(hitUP,25)
+			hit()
 
+		endif
+		
+		if GetSpriteCollision ( 4, caixaUP[j].n) = 1 and (GetRawKeyState(Key_D) = 1 or GetVirtualButtonState(but_D) = 1 ) and ctD = 0 and GetSpriteCollision(2, caixaUP[j].n) and GetSpriteY(caixaUP[j].n) = mdPos
+			
+			SetSpritePosition(caixaUP[j].n,2000,540)
+			SetSpriteActive(caixaUP[j].n,0)
+			j = j + 1
+			PlaySound(hitUP,25)
+			hit()
+
+		endif
 	endif	
 	
 // # colisão do objeto com o personajem
